@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Search } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { navLinks } from "@/lib/site-content";
@@ -11,6 +11,16 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
+      <aside className="original-sidebar">
+        <a className="original-wordmark" href="#top">storyful<span>.</span><small>FROM <b>DOW JONES</b></small></a>
+        <div className="sidebar-search"><Search size={27} /></div>
+        <nav aria-label="Storyful sections" className="sidebar-nav">
+          <strong>Intelligence</strong><a href="#decoded">Risk</a><a href="#decoded">Reputation</a><a href="#decoded">Influence</a><a href="#decoded">Sectors</a><a href="#about">How we work</a>
+          <strong>Verified Video</strong><a href="#episodes">Newswire</a><a href="#episodes">Commercial licensing</a><a href="#episodes">Monetize your videos</a>
+          <strong>Resources</strong><a href="#episodes">Case studies</a><a href="#about">Press</a><a href="#about">About</a><a href="#newsletter">Careers</a><a href="#newsletter">Contact Us</a>
+        </nav>
+        <a className="sidebar-login" href="#newsletter">Newswire log in <ArrowUpRight size={18} /></a>
+      </aside>
       <div className="header-inner">
         <a className="site-logo" href="#top" aria-label="Chain of Thought home">
           <Image src="/images/logo-light.svg" alt="Chain of Thought" width={150} height={23} priority />
