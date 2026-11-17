@@ -66,3 +66,26 @@
   .section-heading h2, .about-copy h2, .decoded h2, .newsletter h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.07em; }
   .decoded { background: #11152f; }
 }
+
+/* Final fidelity pass: the source site uses a centered dark utility bar, not a side rail. */
+@media (min-width: 901px) {
+  .site-header { position: fixed; inset: 0 0 auto; width: auto; height: 66px; background: #19070b; color: #fff; border: 0; }
+  .original-sidebar { display: none; }
+  .header-inner { display: flex; width: min(1100px, calc(100% - 64px)); height: 66px; gap: 32px; }
+  .site-logo, .site-logo img { width: 184px; }
+  .desktop-nav { gap: 25px; margin-left: 0; }
+  .desktop-nav a { color: rgba(255,255,255,.86); font-size: 12px; text-transform: none; letter-spacing: 0; font-weight: 500; }
+  .header-cta { margin-left: auto; border: 1px solid rgba(255,255,255,.8); border-radius: 999px; background: transparent; color: #fff; padding: 10px 15px; text-transform: none; letter-spacing: 0; font-size: 12px; }
+  main, .site-footer { margin-left: 0; }
+  .hero { padding-top: 66px; background: #19070b; color: #fff; }
+  .hero-background { background: radial-gradient(circle at 74% 22%, rgba(255,116,64,.22), transparent 33%), linear-gradient(135deg,#19070b 0%,#3b1016 55%,#6b1d27 100%); }
+  .hero-grid { min-height: 700px; grid-template-columns: .9fr 1.1fr; gap: 6%; }
+  .hero-copy { padding: 82px 0 50px; }
+  .hero .eyebrow { color: #ffd55f; }
+  .hero h1 { font-family: "FigtreeLocal", system-ui, sans-serif; font-size: clamp(4rem, 7vw, 7.4rem); font-weight: 500; letter-spacing: -.075em; line-height: .9; }
+  .hero h1 em { color: #ffd55f; font-family: var(--serif); }
+  .hero-description p { color: rgba(255,255,255,.8); }
+  .hero-art { min-height: 634px; border-left-color: rgba(255,255,255,.18); }
+  .hero-art::after { background: linear-gradient(90deg, rgba(25,7,11,.25), transparent 50%), linear-gradient(0deg, rgba(25,7,11,.72), transparent 60%); }
+  .hero-bottom { border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.58); }
+}
